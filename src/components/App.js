@@ -3,8 +3,7 @@ import SearchBar from './SearchBar';
 import youtube from '../api/youtube';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
-
-const KEY = 'AIzaSyC9M9iKgTgxAbnMC8LAvdYBYJWbo5okGkw';
+import keys from '../config/keys';
 
 class App extends Component {
 	state = { videos: [], selectedVideo: null };
@@ -20,7 +19,7 @@ class App extends Component {
 				part: "snippet",
 				type: "video",
 				maxResults: 5,
-				key: KEY
+				key: keys.googleApi
 			 }
 		});
 
